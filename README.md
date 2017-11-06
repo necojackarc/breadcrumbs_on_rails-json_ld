@@ -29,7 +29,6 @@ $ gem install breadcrumbs_on_rails-json_ld
 ```
 
 ## TODO
-* Adopt RuboCop
 * Adopt RSpec
 * Add tests
 
