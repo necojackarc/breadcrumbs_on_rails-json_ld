@@ -1,8 +1,15 @@
 # BreadcrumbsOnRails::JsonLd
-Short description and motivation.
+BreadcrumbsOnRails::JsonLd provides a custom builder for [BreadcrumbsOnRails](https://github.com/weppos/breadcrumbs_on_rails).
 
 ## Usage
-How to use my plugin.
+Pass `builder: BreadcrumbsOnRails::JsonLd::Builder` option to `render_breadcrumbs` and
+enclose them with `script type="application/ld+json"` tag as follows:
+
+```erb
+<script type="application/ld+json">
+  <%= render_breadcrumbs builder: BreadcrumbsOnRails::JsonLd::Builder %>
+</script>
+```
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -21,8 +28,10 @@ Or install it yourself as:
 $ gem install breadcrumbs_on_rails-json_ld
 ```
 
-## Contributing
-Contribution directions go here.
+## TODO
+* Adopt RuboCop
+* Adopt RSpec
+* Add tests
 
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).
