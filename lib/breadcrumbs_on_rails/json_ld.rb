@@ -1,5 +1,1 @@
-module BreadcrumbsOnRails
-  module JsonLd
-    # Your code goes here...
-  end
-end
+require "breadcrumbs_on_rails/json_ld/builder"
