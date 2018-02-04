@@ -4,9 +4,10 @@ AllCops:
     - '**/config.ru'
   Exclude:
     - '**/bin/*'
-    - '**/config/**/*'
-    - '**/db/**/*'
+    - 'spec/dummy/**/*'
+    - 'spec/*_helper.rb'
     - '*.gemspec'
+    - 'Appraisals'
     - 'Gemfile'
 
 Rails:
