@@ -5,6 +5,7 @@ AllCops:
   Exclude:
     - '**/bin/*'
     - 'spec/dummy/**/*'
+    - 'spec/*_helper.rb'
     - '*.gemspec'
     - 'Gemfile'
 
