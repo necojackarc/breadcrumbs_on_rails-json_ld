@@ -4,8 +4,7 @@ AllCops:
     - '**/config.ru'
   Exclude:
     - '**/bin/*'
-    - '**/config/**/*'
-    - '**/db/**/*'
+    - 'spec/dummy/**/*'
     - '*.gemspec'
     - 'Gemfile'
 
