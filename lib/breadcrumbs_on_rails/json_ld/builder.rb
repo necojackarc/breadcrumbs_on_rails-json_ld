@@ -1,4 +1,5 @@
 require "breadcrumbs_on_rails"
+require "uri"
 
 module BreadcrumbsOnRails
   module JsonLd
@@ -19,7 +20,7 @@ module BreadcrumbsOnRails
           "@type" => "ListItem",
           "position" => index,
           "item" => {
-            "@id" => "#{@context.root_url.chop}#{compute_path(element)}",
+            "@id" => URI.join(@context.root_url, compute_path(element)),
             "name" => compute_name(element),
           },
         }
