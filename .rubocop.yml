@@ -13,63 +13,73 @@ AllCops:
 Rails:
   Enabled: true
 
-# Accept single-line methods with no body
+# Accept single-line methods if they have no body
 SingleLineMethods:
   AllowIfMethodIsEmpty: true
 
-# Top-level documentation of classes and modules are needless
+# Don't require top-level documentation of classes and modules
 Documentation:
   Enabled: false
 
-# Allow to chain of block after another block that spans multiple lines
+# Allow chaining methods after multi-line blocks
 MultilineBlockChain:
   Enabled: false
 
-# Allow `->` literal for multi line blocks
+# Allow using `->` literals for multi-line blocks
 Lambda:
   Enabled: false
 
-# Both nested and compact are okay
+# Accept both definition styles: nested and compact
 ClassAndModuleChildren:
   Enabled: false
 
-# Specifying param names is unnecessary
+# Don't restrict parameter names for single-line blocks
 Style/SingleLineBlockParams:
   Enabled: false
 
-# Prefer Kernel#sprintf
+# Use `sprintf` instead of `format` and `%`
 FormatString:
   EnforcedStyle: sprintf
 
-# Maximum method length
+# Keep every line less than or equal to 80 characters
+LineLength:
+  Max: 80
+
+# Use "postfix if/unless" when the length exceeds this value
+IfUnlessModifier:
+  MaxLineLength: 80
+
+# Keep every method less than or equal 20 lines
 MethodLength:
   Max: 20
 
-# Tune to MethodLength
+# Keep ABC size in a class less than or equal to 30
+# This should be sync with `MethodLength`
 Metrics/AbcSize:
   Max: 30
 
-# Tune to MethodLength
+# Keep every class less than or equal to 200 lines
+# This should be sync with `MethodLength`
 Metrics/ClassLength:
   Max: 200
 
-# Prefer double_quotes strings unless your string literal contains escape chars
+# Use double quotes for string literals unless they contains escape characters
 StringLiterals:
   EnforcedStyle: double_quotes
 
-# Prefer raise over fail for exceptions
+# Use `raise` instead of `fail` for exceptions
 Style/SignalException:
   EnforcedStyle: only_raise 
 
-# Prefer trailing comma in argument lists
+# Use trailing commas in argument lists
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-# Prefer trailing comma in array and hash literals
+# Use trailing commas in array and hash literals
 Style/TrailingCommaInLiteral:
   EnforcedStyleForMultiline: comma
 
-# Prefer parentheses for almost all percent literals
+# Use parentheses for almost all percent literals
 Style/PercentLiteralDelimiters:
   PreferredDelimiters:
     '%i': '()'
@@ -77,12 +87,12 @@ Style/PercentLiteralDelimiters:
     '%w': '()'
     '%W': '()'
 
-# Allow `has_` as prefix of predicate methods
-Style/PredicateName:
+# Allow adding `has_` as a prefix of predicate methods
+Naming/PredicateName:
   NamePrefixBlacklist:
     - is_
     - have_
 
-# Prefer `has_?` style for Hash methods
+# Use `has_xxx?` methods of Hash
 Style/PreferredHashMethods:
   EnforcedStyle: verbose
