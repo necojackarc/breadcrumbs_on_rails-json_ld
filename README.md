@@ -1,6 +1,8 @@
 # BreadcrumbsOnRails::JsonLd
 
 [![Build Status](https://travis-ci.org/necojackarc/breadcrumbs_on_rails-json_ld.svg?branch=master)](https://travis-ci.org/necojackarc/breadcrumbs_on_rails-json_ld)
+[![Maintainability](https://api.codeclimate.com/v1/badges/ff9c59d2fa0c960764ca/maintainability)](https://codeclimate.com/github/necojackarc/breadcrumbs_on_rails-json_ld/maintainability)
+[![Test Coverage](https://api.codeclimate.com/v1/badges/ff9c59d2fa0c960764ca/test_coverage)](https://codeclimate.com/github/necojackarc/breadcrumbs_on_rails-json_ld/test_coverage)
 
 BreadcrumbsOnRails::JsonLd provides a custom builder for [BreadcrumbsOnRails](https://github.com/weppos/breadcrumbs_on_rails).
 
@@ -22,11 +24,13 @@ gem 'breadcrumbs_on_rails-json_ld'
 ```
 
 And then execute:
+
 ```bash
 $ bundle
 ```
 
 Or install it yourself as:
+
 ```bash
 $ gem install breadcrumbs_on_rails-json_ld
 ```
