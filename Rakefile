@@ -15,3 +15,5 @@ RDoc::Task.new(:rdoc) do |rdoc|
 end
 
 require "bundler/gem_tasks"
+
+task default: :spec

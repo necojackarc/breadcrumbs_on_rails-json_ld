@@ -1,0 +1,35 @@
+language: ruby
+sudo: false
+rvm:
+  - 2.3.6
+  - 2.4.3
+  - 2.5.0
+gemfile:
+  - gemfiles/rails40x.gemfile
+  - gemfiles/rails41x.gemfile
+  - gemfiles/rails42x.gemfile
+  - gemfiles/rails50x.gemfile
+  - gemfiles/rails51x.gemfile
+matrix:
+  exclude:
+    - rvm: 2.4.3
+      gemfile: gemfiles/rails40x.gemfile
+    - rvm: 2.4.3
+      gemfile: gemfiles/rails41x.gemfile
+    - rvm: 2.5.0
+      gemfile: gemfiles/rails40x.gemfile
+    - rvm: 2.5.0
+      gemfile: gemfiles/rails41x.gemfile
+branches:
+  only:
+    - master
+before_install:
+  - gem update --system --no-document
+before_script:
+  - curl -L https://codeclimate.com/downloads/test-reporter/test-reporter-latest-linux-amd64 > ./cc-test-reporter
+  - chmod +x ./cc-test-reporter
+  - ./cc-test-reporter before-build
+after_script:
+  - ./cc-test-reporter after-build --exit-code $TRAVIS_TEST_RESULT
+notifications:
+  email: false
