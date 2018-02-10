@@ -1,4 +1,7 @@
 # BreadcrumbsOnRails::JsonLd
+
+[![Build Status](https://travis-ci.org/necojackarc/breadcrumbs_on_rails-json_ld.svg?branch=master)](https://travis-ci.org/necojackarc/breadcrumbs_on_rails-json_ld)
+
 BreadcrumbsOnRails::JsonLd provides a custom builder for [BreadcrumbsOnRails](https://github.com/weppos/breadcrumbs_on_rails).
 
 ## Usage
