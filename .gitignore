@@ -1,4 +1,5 @@
 .bundle/
+coverage/
 gemfiles/*.lock
 Gemfile.lock
 log/*.log

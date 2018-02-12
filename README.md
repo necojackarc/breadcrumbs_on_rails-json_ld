@@ -35,8 +35,5 @@ Or install it yourself as:
 $ gem install breadcrumbs_on_rails-json_ld
 ```
 
-## TODO
-* Add tests
-
 ## License
 The gem is available as open source under the terms of the [MIT License](http://opensource.org/licenses/MIT).

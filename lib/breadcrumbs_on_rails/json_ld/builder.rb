@@ -20,7 +20,7 @@ module BreadcrumbsOnRails
           "@type" => "ListItem",
           "position" => index,
           "item" => {
-            "@id" => URI.join(@context.root_url, compute_path(element)),
+            "@id" => URI.join(@context.root_url, compute_path(element)).to_s,
             "name" => compute_name(element),
           },
         }
