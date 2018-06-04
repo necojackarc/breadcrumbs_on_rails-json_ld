@@ -2,6 +2,7 @@ AllCops:
   Include:
     - '**/Rakefile'
     - '**/config.ru'
+    - 'lib/**/*'
   Exclude:
     - '**/bin/*'
     - 'spec/dummy/**/*'
@@ -42,12 +43,8 @@ FormatString:
   EnforcedStyle: sprintf
 
 # Keep every line less than or equal to 80 characters
-LineLength:
+Metrics/LineLength:
   Max: 80
-
-# Use "postfix if/unless" when the length exceeds this value
-IfUnlessModifier:
-  MaxLineLength: 80
 
 # Keep every method less than or equal 20 lines
 MethodLength:
@@ -75,8 +72,12 @@ Style/SignalException:
 Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 
-# Use trailing commas in array and hash literals
-Style/TrailingCommaInLiteral:
+# Use trailing commas in array literals
+Style/TrailingCommaInArrayLiteral:
+  EnforcedStyleForMultiline: comma
+
+# Use trailing commas in hash literals
+Style/TrailingCommaInHashLiteral:
   EnforcedStyleForMultiline: comma
 
 # Use parentheses for almost all percent literals
